@@ -12,7 +12,7 @@
 .kopf { background: var(--dunkel); color: var(--weiss); }
 .kopf__zeile { display: flex; align-items: center; gap: 40px; min-height: 76px; flex-wrap: wrap; }
 .marke { font-size: 18px; letter-spacing: 0.1em; text-decoration: none; white-space: nowrap; color: var(--weiss); }
-.marke__zahl { color: var(--orange); margin-left: 6px; letter-spacing: 0.04em; }
+.marke__zahl { color: var(--akzent); margin-left: 6px; letter-spacing: 0.04em; }
 .hauptnav { display: flex; gap: 24px; margin-left: auto; }
 .hauptnav a { font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; color: var(--weiss); }
 .hauptnav a:hover { color: var(--akzent); }

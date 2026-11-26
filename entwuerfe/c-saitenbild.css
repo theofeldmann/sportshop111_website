@@ -87,7 +87,7 @@
 
 .produkte { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .produkt { background: var(--weiss); border: 1px solid var(--linie); border-radius: var(--radius-flaeche); padding: 16px; display: grid; gap: 14px; }
-.produkt__bild { aspect-ratio: 3 / 4; background: var(--beton) !important; }
+.abschnitt--beton .produkt__bild { aspect-ratio: 3 / 4; background: var(--beton); }
 .produkt__info { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 13px; border-top: 1px solid var(--linie); padding-top: 12px; }
 .produkt__info h3 { font-size: 13px; letter-spacing: 0.02em; }
 .produkt .ph { background: var(--beton); }

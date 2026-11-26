@@ -99,7 +99,8 @@
   font-size: clamp(48px, 7vw, 72px); line-height: 1; letter-spacing: -0.02em; color: var(--akzent);
 }
 .automat h2 { font-size: 26px; line-height: 1.3; }
-.automat p { color: #cfcfcf; }
+.automat p:not(.automat__zeit) { color: #cfcfcf; }
+.hero :focus-visible, .automat :focus-visible, .fuss :focus-visible { outline-color: var(--akzent); }
 
 /* Produkte */
 .produkt {

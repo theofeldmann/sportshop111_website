@@ -96,7 +96,7 @@ main .abschnitt .pill:hover { background: var(--schwarz); color: var(--akzent); 
 .besaitung__text { display: grid; gap: 16px; font-size: 18px; line-height: 1.55; }
 .team { display: grid; gap: 16px; }
 .team > div { border-top: 1px solid var(--linie); padding-top: 12px; display: grid; gap: 4px; }
-.team h3 { font-size: 22px; }
+.team h3:not(.vh) { font-size: 22px; }
 .team p { color: var(--text2); font-size: 15px; }
 
 /* Kontakt */
@@ -114,6 +114,9 @@ main .abschnitt .pill:hover { background: var(--schwarz); color: var(--akzent); 
 .fuss { background: var(--petrol); color: var(--weiss); }
 .fuss__raster { display: flex; flex-wrap: wrap; gap: 16px 40px; align-items: center; justify-content: space-between; padding-block: 56px; font-size: 13px; }
 .fuss .mono { color: #c4d6dd; }
+.fuss__marken { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.fuss__marken li + li::before { content: "·"; margin-right: 14px; }
+.abteilung .tag { font-weight: 400; }
 .fuss nav { display: flex; gap: 24px; }
 .fuss a { text-underline-offset: 4px; }
 

@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="claude:viewport-fit-sides" content="cover">
 <meta name="robots" content="noindex">
 <title>Sportshop 111 · Entwurf D</title>
 <link rel="stylesheet" href="basis.css">
@@ -43,7 +42,7 @@
     <div class="innen hero__raster">
       <div class="hero__text">
         <p class="mono">Sportshop 111 · Nürnberg-Mögeldorf</p>
-        <h1 id="hero-titel">Hier wird besaitet. Und beraten.</h1>
+        <h1 id="hero-titel">Hier wird besaitet.</h1>
         <p class="hero__sub">Tennis, Padel und Hockey. Besaitet wird bei uns im Laden auf einer Babolat Sensor Expert Dual.</p>
         <div class="hero__aktionen">
           <a class="pill" href="#besaitung">Zur Besaitung</a>
@@ -51,13 +50,13 @@
         </div>
       </div>
       <figure class="auftrag" aria-label="Beispiel eines Besaitungsauftrags">
-        <figcaption class="auftrag__kopf"><span>Besaitungsauftrag</span><span class="auftrag__nr">Nr. ____</span></figcaption>
+        <figcaption class="auftrag__kopf"><span>Besaitungsauftrag</span><span class="auftrag__nr">Muster</span></figcaption>
         <dl>
-          <div><dt>Schläger</dt><dd class="leer"></dd></div>
+          <div><dt>Schläger</dt><dd class="leer"><span class="vh">frei</span></dd></div>
           <div><dt>Saite</dt><dd>eine von über 60 Sorten oder eure eigene</dd></div>
           <div><dt>Härte</dt><dd class="leer"><span class="einheit">kg</span></dd></div>
           <div><dt>Maschine</dt><dd>Babolat Sensor Expert Dual</dd></div>
-          <div><dt>Abholung</dt><dd class="leer"></dd></div>
+          <div><dt>Abholung</dt><dd class="leer"><span class="vh">frei</span></dd></div>
         </dl>
         <p class="auftrag__fuss">Preis <span class="ph">ab –,– €</span></p>
       </figure>
@@ -78,19 +77,19 @@
       <h2 id="sport-titel" class="titel">Abteilungen</h2>
       <div class="raster3">
         <article class="abteilung">
-          <p class="tag">Tennis</p>
+          <h3 class="tag">Tennis</h3>
           <div class="ph-bild abteilung__bild">Tennis, Querformat</div>
           <p>Schläger von Wilson, Yonex und Babolat. Testschläger kostenlos, Kinderschläger ab 3 Jahren, Turnierbälle für Medenrunde und LK-Turniere auf Anfrage.</p>
         </article>
         <article class="abteilung">
-          <p class="tag">Padel</p>
+          <h3 class="tag">Padel</h3>
           <div class="ph-bild abteilung__bild">Padel, Querformat</div>
           <p>Schläger, Bälle und Griffbänder. Leihschläger im Laden oder rund um die Uhr am Automaten. <a href="https://www.nhtc.de/padel/" rel="noopener noreferrer" target="_blank">Court im NHTC buchen</a></p>
         </article>
         <article class="abteilung">
-          <p class="tag">Hockey</p>
+          <h3 class="tag">Hockey</h3>
           <div class="ph-bild abteilung__bild">Hockey, Querformat</div>
-          <p>Ansprechpartnerinnen sind Susa und Barbara. <span class="ph">Hockey-Sortiment folgt</span></p>
+          <p>Ansprechpartnerinnen sind unsere Hockeyexpertinnen Susa und Barbara. <span class="ph">Hockey-Sortiment folgt</span></p>
         </article>
       </div>
     </div>
@@ -99,7 +98,7 @@
   <section class="abschnitt abschnitt--linie" aria-labelledby="produkte-titel">
     <div class="innen">
       <div class="titelzeile">
-        <h2 id="produkte-titel" class="titel">Auf Lager</h2>
+        <h2 id="produkte-titel" class="titel">Aus dem Sortiment</h2>
         <p class="mono">Beispielmodelle · reservieren per Telefon</p>
       </div>
       <ul class="lager">
@@ -107,19 +106,19 @@
           <div class="ph-bild posten__bild">Foto</div>
           <div class="posten__name"><h3>Babolat Pure Drive</h3><p class="mono">Tennisschläger</p></div>
           <p class="posten__preis"><span class="ph">–,– €</span></p>
-          <a class="pill pill--klein" href="#kontakt">Reservieren</a>
+          <a class="pill pill--klein" href="#kontakt">Im Laden reservieren</a>
         </li>
         <li class="posten">
           <div class="ph-bild posten__bild">Foto</div>
           <div class="posten__name"><h3>Kirschbaum Pro Line II</h3><p class="mono">Tennissaite</p></div>
           <p class="posten__preis"><span class="ph">–,– €</span></p>
-          <a class="pill pill--klein" href="#kontakt">Reservieren</a>
+          <a class="pill pill--klein" href="#kontakt">Im Laden reservieren</a>
         </li>
         <li class="posten">
           <div class="ph-bild posten__bild">Foto</div>
           <div class="posten__name"><h3>Head Tour</h3><p class="mono">Tennisbälle</p></div>
           <p class="posten__preis"><span class="ph">–,– €</span></p>
-          <a class="pill pill--klein" href="#kontakt">Reservieren</a>
+          <a class="pill pill--klein" href="#kontakt">Im Laden reservieren</a>
         </li>
       </ul>
     </div>
@@ -129,10 +128,11 @@
     <div class="innen besaitung__raster">
       <h2 id="besaitung-titel" class="titel">Besaitung</h2>
       <div class="besaitung__text">
-        <p>Spielstärke, Spielart und Alter entscheiden mit, welche Saite und welche Härte passen. Wir bilden uns dazu laufend weiter und kennen die Anforderungen aus Freizeit, Turnier und Profibereich.</p>
+        <p>Spielstärke, Spielart und Alter entscheiden mit, welche Saite passt. Wir bilden uns dazu laufend weiter und kennen die Anforderungen aus Freizeit, Turnier und Profibereich.</p>
         <p>Erfahrung haben wir unter anderem vom WTA-Turnier Nürnberg und aus der Tennis-Bundesliga des 1. FCN. Für Vielbesaiter gibt es Sonderkonditionen, fast alle Saiten besorgen wir auch als Rollenware.</p>
       </div>
       <div class="team">
+        <h3 class="vh">Besaitung im Team</h3>
         <div><h3>Jens</h3><p>Tennis seit 1977, Bayernliga Herren 40, Mitinhaber</p></div>
         <div><h3>Jochen</h3><p>Besaitet seit 1991, Mitinhaber</p></div>
       </div>
@@ -157,6 +157,7 @@
             <tr><th scope="row">So</th><td>geschlossen</td></tr>
           </tbody>
         </table>
+        <p class="hinweis-ph"><span class="ph">Zeiten laut bisheriger Website, vom Laden zu bestätigen</span></p>
         <p class="kontakt__termin">Nach Absprache auch außerhalb: Tennis, Jens <a href="tel:+491775514256">0177 5514256</a> · Hockey, Susa <a href="tel:+491785441545">0178 5441545</a></p>
       </div>
     </div>
@@ -166,7 +167,7 @@
 <footer class="fuss">
   <div class="innen fuss__raster">
     <p class="marke">SPORTSHOP&nbsp;<span class="marke__zahl">111</span></p>
-    <p class="mono">Babolat · Wilson · Yonex · Head · Dunlop · Luxilon · Polystar · Kirschbaum</p>
+    <ul class="mono fuss__marken" aria-label="Marken"><li>Babolat</li><li>Wilson</li><li>Yonex</li><li>Head</li><li>Dunlop</li><li>Luxilon</li><li>Polystar</li><li>Kirschbaum</li></ul>
     <nav aria-label="Rechtliches"><a href="#">Impressum</a> <a href="#">Datenschutz</a></nav>
   </div>
 </footer>

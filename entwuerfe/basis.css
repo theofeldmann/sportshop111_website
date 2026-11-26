@@ -121,6 +121,9 @@ ul, ol { list-style: none; }
   white-space: nowrap;
 }
 
+.hinweis-ph { margin-top: 12px; font-size: 13px; }
+.hinweis-ph .ph, .fussnote .ph { white-space: normal; }
+
 /* Mobile Aktionsleiste: Anrufen und Route immer erreichbar */
 .mobilbar { display: none; }
 @media (max-width: 720px) {
