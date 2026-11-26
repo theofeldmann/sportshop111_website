@@ -14,8 +14,9 @@
 }
 .filter a:hover { background: var(--beton); }
 .filter a[aria-current="page"] { background: var(--schwarz); color: var(--weiss); }
-.produkt__zeile h3 a { text-decoration: none; }
-.produkt__zeile h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.produkt__zeile h2 { font-size: 13px; letter-spacing: 0.02em; }
+.produkt__zeile h2 a { text-decoration: none; }
+.produkt__zeile h2 a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .produkt__typ { padding: 6px 20px 0; font-size: 13px; color: var(--text2); }
 
 /* Produktseite */
@@ -52,7 +53,7 @@
   border: 1px solid var(--schwarz); border-radius: var(--radius-aktion);
   padding: 12px 20px; width: 100%; min-height: 48px;
 }
-.feld select:focus, .feld input:focus { outline: none; border-width: 2px; padding: 11px 19px; }
+.feld select:focus-visible, .feld input:focus-visible { outline: 2px solid var(--schwarz); outline-offset: 2px; border-width: 2px; padding: 11px 19px; }
 .feld input::placeholder { color: var(--graphit); opacity: 1; }
 .feld__hinweis { font-size: 13px; color: var(--text2); }
 .pill--breit { width: 100%; }
@@ -95,5 +96,9 @@
 @media (max-width: 720px) {
   .zeile-posten { grid-template-columns: 64px 1fr; gap: 8px 16px; }
   .posten__bild { grid-row: span 3; }
-  .tabelle { display: block; overflow-x: auto; }
+  .tabelle { table-layout: fixed; }
+  .tabelle th, .tabelle td { overflow-wrap: break-word; hyphens: auto; font-size: 14px; padding-right: 8px; }
+  .tabelle tbody th { width: 27%; }
+  .tabelle thead th { font-size: 11px; }
+  .tabelle .ph { white-space: normal; }
 }
