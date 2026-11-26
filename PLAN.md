@@ -77,3 +77,15 @@ ob Spielerinnen-Namen (WTA) genannt werden dürfen.
 - CSP `default-src 'self'`, kein Inline-Skript; Header als `_headers` (Netlify/Cloudflare) **und** `.htaccess` (Apache)
 - Externe Links mit `rel="noopener noreferrer"`
 - Kein Cookie, kein LocalStorage für Tracking
+
+---
+
+## Änderung 26.11.2026: Shopify statt statischer Seite
+
+Entscheidung des Auftraggebers: Der Laden bekommt einen Shopify-Online-Shop, den der Auftraggeber konfiguriert und gestaltet. Gewählte Richtung: Entwurf A (Court).
+
+Folgen für den Plan:
+- Abschnitt 5 (Sicherheits-Checkliste) gilt für eine statische Seite. Bei Shopify liegen Hosting, Checkout und Zahlungsdaten bei Shopify. Offen bleiben Theme-Code, Apps, Zugangsdaten und Rechtstexte.
+- Neue Pflichten durch den Verkauf: AGB, Widerrufsbelehrung, Versandinformationen, Button-Lösung am Checkout, Preisangaben mit MwSt. und Grundpreis wo nötig, Barrierefreiheit (BFSG), Cookie-Einwilligung.
+- Neue Seiten im Entwurf: Kollektion, Produktseite, Warenkorb, Abholung im Laden.
+- Besaitung als Service-Produkt mit Auswahl von Schläger, Saite und Härte.
