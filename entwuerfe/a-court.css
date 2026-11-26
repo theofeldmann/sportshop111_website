@@ -1,0 +1,180 @@
+/* Entwurf A · Court
+   Layout: TWOTWO-nah. Weiße Fläche, schwarze Haarlinien, vollflächiges dunkles Foto mit großer Akzent-Headline, 3er-Raster. */
+:root {
+  --akzent: #dcf500;      /* aufgefrischtes Ladengrün, nah am TWOTWO-Lime */
+  --linie: var(--schwarz);
+  --text2: var(--graphit);
+}
+
+.label {
+  font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--text2);
+}
+
+/* Kopf */
+.kopf__zeile {
+  display: flex; align-items: center; gap: 32px;
+  min-height: 80px; flex-wrap: wrap;
+}
+.marke {
+  font-size: 18px; letter-spacing: 0.08em; text-decoration: none; white-space: nowrap;
+}
+.marke__zahl {
+  background: var(--akzent); padding: 0 8px; border-radius: var(--radius-aktion);
+  letter-spacing: 0.04em;
+}
+.hauptnav { display: flex; gap: 24px; flex: 1; }
+.hauptnav a, .kopf__tel {
+  font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none;
+}
+.hauptnav a:hover, .kopf__tel:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+/* Hero */
+.hero { position: relative; }
+.hero__bild {
+  min-height: 560px; border-radius: 0; align-items: flex-end;
+}
+.hero__text {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 32px; text-align: center;
+  padding-left: var(--gutter-l); padding-right: var(--gutter-r);
+}
+.hero h1 {
+  color: var(--akzent);
+  font-size: clamp(40px, 7vw, 72px); line-height: 1.1; letter-spacing: -0.02em;
+  max-width: 14ch;
+}
+
+.pill {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--akzent); color: var(--schwarz);
+  border-radius: var(--radius-aktion); padding: 16px 32px;
+  font-size: 16px; line-height: 1; text-decoration: none;
+  border: 1px solid var(--akzent);
+}
+.pill:hover { background: var(--schwarz); color: var(--akzent); border-color: var(--schwarz); }
+.pill--rand { background: transparent; color: var(--weiss); border-color: var(--weiss); }
+.pill--rand:hover { background: var(--akzent); color: var(--schwarz); border-color: var(--akzent); }
+.pill--voll { width: 100%; padding: 12px 20px; }
+
+/* Infoleiste */
+.infoleiste { border-bottom: 1px solid var(--linie); }
+.infoleiste__raster {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+}
+.infoleiste__raster > div {
+  padding-block: 24px; display: grid; gap: 4px; min-width: 0;
+}
+.infoleiste__raster > div + div { border-left: 1px solid var(--linie); padding-left: 24px; }
+
+/* Abschnitte */
+.abschnitt { padding-block: 64px; }
+.kopfzeile {
+  max-width: 640px; margin: 0 auto 40px; text-align: center;
+  display: grid; gap: 16px;
+}
+.kopfzeile h2 { font-size: clamp(28px, 4vw, 38px); line-height: 1.2; letter-spacing: -0.01em; }
+.kopfzeile p { color: var(--text2); }
+
+.raster3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+.sportkarte {
+  border: 1px solid var(--linie); border-radius: var(--radius-flaeche);
+  overflow: hidden; display: flex; flex-direction: column;
+}
+.sportkarte__bild { aspect-ratio: 3 / 4; border-radius: 0; }
+.sportkarte__text { padding: 20px; display: grid; gap: 12px; align-content: start; flex: 1; }
+.sportkarte h3 { font-size: 26px; line-height: 1.3; letter-spacing: -0.01em; }
+.sportkarte p { color: var(--text2); }
+.pfeil { font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; text-underline-offset: 4px; align-self: end; }
+
+/* Padelautomat */
+.automat { background: var(--schwarz); color: var(--weiss); }
+.automat__innen {
+  display: grid; grid-template-columns: auto 1fr auto; gap: 32px; align-items: center;
+  padding-block: 40px;
+}
+.automat__zeit {
+  font-size: clamp(48px, 7vw, 72px); line-height: 1; letter-spacing: -0.02em; color: var(--akzent);
+}
+.automat h2 { font-size: 26px; line-height: 1.3; }
+.automat p { color: #cfcfcf; }
+
+/* Produkte */
+.produkt {
+  border: 1px solid var(--linie); border-radius: var(--radius-flaeche);
+  overflow: hidden; display: grid;
+}
+.produkt__bild { aspect-ratio: 3 / 4; border-radius: 0; }
+.tag {
+  position: absolute; top: 14px; right: 14px;
+  background: var(--akzent); color: var(--schwarz);
+  padding: 2px 10px; border-radius: var(--radius-aktion);
+  font-family: var(--mono); font-size: 12px;
+}
+.produkt__zeile {
+  display: flex; justify-content: space-between; gap: 12px; align-items: baseline;
+  padding: 14px 20px 0; margin-inline: 0; border-top: 1px solid var(--linie);
+  font-size: 13px;
+}
+.produkt__zeile h3 { font-size: 13px; letter-spacing: 0.02em; }
+.produkt .pill--voll { width: auto; margin: 16px 20px 20px; }
+
+/* Besaitung */
+.besaitung { border-top: 1px solid var(--linie); }
+.besaitung__raster { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+.besaitung h2 { font-size: clamp(28px, 4vw, 38px); line-height: 1.2; margin-bottom: 20px; }
+.besaitung__lead { font-size: 22px; line-height: 1.4; max-width: 30ch; }
+.fakten > div {
+  display: grid; grid-template-columns: 160px 1fr; gap: 16px;
+  padding-block: 14px; border-top: 1px solid var(--linie);
+}
+.fakten > div:last-child { border-bottom: 1px solid var(--linie); }
+.fakten dt { font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text2); padding-top: 2px; }
+
+/* Marken */
+.marken { padding-block: 40px; border-top: 1px solid var(--linie); border-bottom: 1px solid var(--linie); }
+.marken .innen { display: grid; gap: 16px; }
+.marken__liste { display: flex; flex-wrap: wrap; gap: 8px 40px; font-size: 26px; letter-spacing: -0.01em; }
+
+/* Kontakt */
+.kontakt__raster { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+.kontakt h2 { font-size: clamp(28px, 4vw, 38px); line-height: 1.2; margin-bottom: 24px; }
+address { font-style: normal; font-size: 22px; line-height: 1.4; margin-bottom: 20px; }
+.kontakt__wege { color: var(--text2); }
+.zeiten { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.zeiten th, .zeiten td { text-align: left; font-weight: 400; padding: 14px 0; border-top: 1px solid var(--linie); vertical-align: top; }
+.zeiten tr:last-child th, .zeiten tr:last-child td { border-bottom: 1px solid var(--linie); }
+.zeiten th { padding-right: 16px; color: var(--text2); }
+.kontakt__termin { margin-top: 20px; color: var(--text2); font-size: 15px; }
+
+/* Fuß */
+.fuss { background: var(--schwarz); color: var(--weiss); }
+.fuss__raster {
+  display: flex; flex-wrap: wrap; gap: 16px 40px; align-items: center; justify-content: space-between;
+  padding-block: 56px; font-size: 13px;
+}
+.marke--fuss { font-size: 18px; }
+.fuss .marke__zahl { color: var(--schwarz); }
+.fuss nav { display: flex; gap: 24px; }
+.fuss a { text-underline-offset: 4px; }
+
+/* Mobil */
+@media (max-width: 900px) {
+  .hauptnav { order: 3; flex-basis: 100%; overflow-x: auto; padding-bottom: 12px; gap: 20px; }
+  .kopf__tel { margin-left: auto; }
+  .raster3 { grid-template-columns: 1fr; }
+  .besaitung__raster, .kontakt__raster { grid-template-columns: 1fr; gap: 32px; }
+  .automat__innen { grid-template-columns: 1fr; gap: 16px; }
+}
+@media (max-width: 720px) {
+  .sportkarte__bild { aspect-ratio: 16 / 10; }
+  .produkt__bild { aspect-ratio: 1 / 1; }
+  .kopf__zeile { gap: 12px 20px; padding-top: 16px; }
+  .hero__bild { min-height: 440px; }
+  .infoleiste__raster { grid-template-columns: 1fr; }
+  .infoleiste__raster > div + div { border-left: 0; padding-left: 0; border-top: 1px solid var(--linie); }
+  .fakten > div { grid-template-columns: 1fr; gap: 4px; }
+  .marken__liste { font-size: 20px; gap: 6px 24px; }
+}

@@ -1,0 +1,151 @@
+/* Gemeinsame Basis aller vier Entwürfe: lokale Schriften, Reset, Platzhalter, Entwurfsleiste, mobile Aktionsleiste. */
+
+@font-face {
+  font-family: "Inter Tight";
+  src: url("fonts/inter-tight-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("fonts/ibm-plex-mono-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --schrift: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --weiss: #ffffff;
+  --schwarz: #000000;
+  --graphit: #323232;
+  --beton: #e6e6e6;
+  --petrol: #004b6b;
+  --orange: #dc7605;
+  --radius-flaeche: 16px;
+  --radius-aktion: 50px;
+  --max: 1280px;
+  --gutter-l: max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--schrift);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  background: var(--weiss);
+  color: var(--schwarz);
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+h1, h2, h3, h4 { font-weight: 400; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+ul, ol, dl, dd { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+
+:focus-visible { outline: 2px solid var(--schwarz); outline-offset: 3px; }
+
+.skiplink {
+  position: absolute; left: 16px; top: -60px;
+  background: var(--schwarz); color: var(--weiss);
+  padding: 8px 16px; border-radius: var(--radius-aktion);
+  z-index: 100; text-decoration: none;
+}
+.skiplink:focus { top: 12px; }
+
+.innen {
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-left: var(--gutter-l);
+  padding-right: var(--gutter-r);
+}
+
+/* Entwurfsleiste: nur im Prototyp, zeigt Variante und Wechsel */
+.entwurf {
+  background: var(--beton);
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--schwarz);
+}
+.entwurf .innen {
+  display: flex; flex-wrap: wrap; gap: 8px 20px;
+  align-items: center; justify-content: space-between;
+  padding-block: 8px;
+}
+.entwurf nav { display: flex; gap: 4px; }
+.entwurf nav a {
+  text-decoration: none; padding: 2px 10px;
+  border: 1px solid var(--schwarz); border-radius: var(--radius-aktion);
+}
+.entwurf nav a[aria-current="page"] { background: var(--schwarz); color: var(--weiss); }
+
+/* Platzhalter: bewusst sichtbar, damit nichts erfunden wirkt */
+.ph-bild {
+  position: relative;
+  border-radius: var(--radius-flaeche);
+  background: var(--beton);
+  display: flex; align-items: flex-end;
+  padding: 16px;
+  font-family: var(--mono);
+  font-size: 12px; line-height: 1.4;
+  color: var(--graphit);
+  max-width: 100%;
+  overflow: hidden;
+}
+.ph-bild::before {
+  content: "FOTO FOLGT";
+  position: absolute; top: 16px; left: 16px;
+  letter-spacing: 0.08em;
+}
+.ph-bild--dunkel { background: #3a3d3f; color: #c9cccd; }
+
+.ph {
+  font-family: var(--mono);
+  font-size: 0.85em;
+  background: var(--beton);
+  color: var(--graphit);
+  padding: 1px 6px;
+  border-radius: var(--radius-aktion);
+  white-space: nowrap;
+}
+
+/* Mobile Aktionsleiste: Anrufen und Route immer erreichbar */
+.mobilbar { display: none; }
+@media (max-width: 720px) {
+  body { padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
+  .mobilbar {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+    padding: 10px var(--gutter-r) calc(10px + env(safe-area-inset-bottom, 0px)) var(--gutter-l);
+    background: var(--weiss);
+    border-top: 1px solid var(--schwarz);
+  }
+  .mobilbar a {
+    display: flex; align-items: center; justify-content: center;
+    min-height: 48px; border-radius: var(--radius-aktion);
+    text-decoration: none; font-size: 15px;
+    border: 1px solid var(--schwarz);
+  }
+  .mobilbar a:first-child { background: var(--akzent); border-color: var(--akzent); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+
+.vh {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}

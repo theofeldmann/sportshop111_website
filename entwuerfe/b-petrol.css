@@ -1,0 +1,130 @@
+/* Entwurf B · Petrol
+   Layout: Ladenfarben im TWOTWO-System. Petrol ersetzt Schwarz bei Kopf, Hero und Fuß, geteilter Hero, Linien in Petrol. */
+:root {
+  --akzent: #c8dc00;      /* Ladengrün, leicht aufgehellt */
+  --dunkel: var(--petrol);
+  --linie: var(--petrol);
+  --text2: #2c4652;       /* Graphit mit Petrol-Stich */
+  --petrol-hell: #e3ecef;
+}
+
+/* Kopf */
+.kopf { background: var(--dunkel); color: var(--weiss); }
+.kopf__zeile { display: flex; align-items: center; gap: 40px; min-height: 76px; flex-wrap: wrap; }
+.marke { font-size: 18px; letter-spacing: 0.1em; text-decoration: none; white-space: nowrap; color: var(--weiss); }
+.marke__zahl { color: var(--orange); margin-left: 6px; letter-spacing: 0.04em; }
+.hauptnav { display: flex; gap: 24px; margin-left: auto; }
+.hauptnav a { font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; color: var(--weiss); }
+.hauptnav a:hover { color: var(--akzent); }
+.kopf :focus-visible, .hero :focus-visible, .fuss :focus-visible { outline-color: var(--akzent); }
+
+/* Hero */
+.hero { background: var(--dunkel); color: var(--weiss); padding-block: 40px 64px; }
+.hero__raster { display: grid; grid-template-columns: 1.15fr 1fr; gap: 40px; align-items: stretch; }
+.hero__text { display: flex; flex-direction: column; justify-content: center; gap: 24px; min-width: 0; }
+.eyebrow { font-family: var(--mono); font-size: 13px; letter-spacing: 0.04em; color: #b9cfd8; }
+.hero h1 { color: var(--akzent); font-size: clamp(38px, 5.6vw, 68px); line-height: 1.1; letter-spacing: -0.02em; }
+.hero__sub { font-size: 20px; line-height: 1.45; color: #e6eef1; max-width: 36ch; }
+.hero__aktionen { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero__bild { min-height: 480px; background: #1d5f7b; color: #cfe0e7; }
+
+.pill {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--akzent); color: var(--schwarz);
+  border: 1px solid var(--akzent); border-radius: var(--radius-aktion);
+  padding: 16px 32px; font-size: 16px; line-height: 1; text-decoration: none;
+}
+.pill:hover { background: var(--weiss); border-color: var(--weiss); }
+.pill--rand { background: transparent; color: inherit; border-color: currentColor; }
+.pill--rand:hover { background: var(--akzent); color: var(--schwarz); border-color: var(--akzent); }
+.pill--voll { width: 100%; padding: 12px 20px; }
+
+/* Kurzinfo */
+.heute { border-bottom: 1px solid var(--linie); }
+.heute__zeile {
+  display: flex; flex-wrap: wrap; gap: 8px 40px; padding-block: 18px;
+  font-variant-numeric: tabular-nums;
+}
+.heute__zeile p:last-child { margin-left: auto; }
+.heute__label { font-family: var(--mono); font-size: 13px; color: var(--text2); margin-right: 8px; }
+
+/* Abschnitte */
+.abschnitt { padding-block: 64px; }
+.titel { font-size: clamp(28px, 4vw, 38px); line-height: 1.2; letter-spacing: -0.01em; color: var(--dunkel); margin-bottom: 32px; }
+.titelzeile { display: flex; flex-wrap: wrap; gap: 8px 40px; align-items: baseline; justify-content: space-between; margin-bottom: 32px; }
+.titelzeile .titel { margin-bottom: 0; }
+.titelzeile p { color: var(--text2); }
+.raster3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+.sport { display: grid; gap: 14px; align-content: start; padding-bottom: 24px; border-bottom: 1px solid var(--linie); }
+.sport__bild { aspect-ratio: 4 / 3; }
+.sport h3 { font-size: 26px; line-height: 1.3; color: var(--dunkel); }
+.sport p { color: var(--text2); }
+
+/* Padel-Band */
+.padel { background: var(--petrol-hell); }
+.padel__raster { display: grid; grid-template-columns: 1.2fr 1.4fr auto; gap: 32px; align-items: center; padding-block: 40px; }
+.padel h2 { font-size: 26px; line-height: 1.3; color: var(--dunkel); display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.padel__chip { background: var(--dunkel); color: var(--akzent); padding: 6px 16px; border-radius: var(--radius-aktion); font-family: var(--mono); font-size: 18px; }
+.padel p { color: var(--text2); }
+.padel .pill:hover { background: var(--dunkel); color: var(--weiss); border-color: var(--dunkel); }
+
+/* Produkte */
+.produkt { border: 1px solid var(--linie); border-radius: var(--radius-flaeche); padding: 16px; display: grid; gap: 10px; align-content: start; }
+.produkt__bild { aspect-ratio: 3 / 4; }
+.produkt h3 { font-size: 18px; line-height: 1.3; margin-top: 6px; }
+.produkt__meta { font-size: 13px; color: var(--text2); padding-bottom: 6px; }
+.produkt .pill:hover { background: var(--dunkel); color: var(--weiss); border-color: var(--dunkel); }
+
+/* Besaitung */
+.besaitung { border-top: 1px solid var(--linie); }
+.besaitung__raster { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: center; }
+.besaitung__bild { aspect-ratio: 1 / 1; }
+.besaitung__text { display: grid; gap: 20px; min-width: 0; }
+.besaitung__text .titel { margin-bottom: 0; }
+.besaitung__text > p { font-size: 18px; line-height: 1.55; color: var(--text2); }
+.haken li { padding: 12px 0 12px 28px; border-top: 1px solid var(--linie); position: relative; }
+.haken li:last-child { border-bottom: 1px solid var(--linie); }
+.haken li::before { content: ""; position: absolute; left: 0; top: 20px; width: 12px; height: 12px; background: var(--akzent); border: 1px solid var(--dunkel); border-radius: var(--radius-aktion); }
+
+/* Team */
+.team { background: var(--petrol-hell); }
+.person { border-top: 1px solid var(--linie); padding-top: 16px; display: grid; gap: 6px; }
+.person h3 { font-size: 22px; color: var(--dunkel); }
+.person p { color: var(--text2); }
+
+/* Kontakt */
+.kontakt { padding-block: 64px; }
+.kontakt__raster { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; }
+.kontakt address { font-style: normal; font-size: 22px; line-height: 1.4; margin-bottom: 16px; }
+.kontakt p { color: var(--text2); }
+.kontakt__route { margin-top: 24px; }
+.kontakt__route .pill--rand { color: var(--dunkel); }
+.kontakt__h3 { font-size: 22px; color: var(--dunkel); margin-bottom: 16px; }
+.zeiten > div { display: grid; grid-template-columns: 170px 1fr; gap: 16px; padding-block: 12px; border-top: 1px solid var(--linie); font-variant-numeric: tabular-nums; }
+.zeiten > div:last-child { border-bottom: 1px solid var(--linie); }
+.zeiten dt { color: var(--text2); }
+.kontakt__termin { margin-top: 16px; font-size: 15px; }
+
+/* Fuß */
+.fuss { background: var(--dunkel); color: var(--weiss); }
+.fuss__raster { display: grid; grid-template-columns: auto 1fr auto; gap: 24px 48px; align-items: center; padding-block: 56px; font-size: 13px; }
+.fuss__marken { display: flex; flex-wrap: wrap; gap: 4px 20px; color: #b9cfd8; letter-spacing: 0.04em; text-transform: uppercase; }
+.fuss nav { display: flex; gap: 24px; }
+.fuss a { text-underline-offset: 4px; }
+
+/* Mobil */
+@media (max-width: 960px) {
+  .hauptnav { order: 3; flex-basis: 100%; margin-left: 0; overflow-x: auto; padding-bottom: 14px; gap: 20px; }
+  .hero__raster, .besaitung__raster, .kontakt__raster { grid-template-columns: 1fr; gap: 32px; }
+  .hero__bild { min-height: 280px; }
+  .raster3 { grid-template-columns: 1fr; }
+  .padel__raster { grid-template-columns: 1fr; gap: 16px; }
+  .fuss__raster { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  .produkt__bild { aspect-ratio: 1 / 1; }
+  .kopf__zeile { gap: 12px; padding-top: 16px; }
+  .heute__zeile p:last-child { margin-left: 0; }
+  .zeiten > div { grid-template-columns: 1fr; gap: 2px; }
+}

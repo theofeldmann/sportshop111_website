@@ -1,0 +1,81 @@
+<title>Sportshop 111 Entwürfe</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="robots" content="noindex">
+<style>
+/* Übersicht der vier Entwürfe. Bewusst nur helles Thema, passend zum Stil der Website. */
+@font-face { font-family: "Inter Tight"; src: url("fonts/inter-tight-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url("fonts/ibm-plex-mono-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+:root {
+  --bg: #ffffff; --fg: #000000; --text2: #323232; --beton: #e6e6e6; --akzent: #d4ea00;
+  --schrift: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+body { background: var(--bg); color: var(--fg); font-family: var(--schrift); font-size: 16px; line-height: 1.6; }
+.seite { max-width: 1200px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 48px 64px; display: grid; gap: 40px; }
+.kopf { display: grid; gap: 12px; max-width: 680px; }
+.kopf p.mono { font-family: var(--mono); font-size: 13px; color: var(--text2); }
+h1 { font-weight: 400; font-size: clamp(34px, 5vw, 56px); line-height: 1.1; letter-spacing: -0.02em; margin: 0; text-wrap: balance; }
+.kopf p { margin: 0; color: var(--text2); }
+.raster { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.karte { border: 1px solid var(--fg); border-radius: 16px; padding: 16px; display: grid; gap: 16px; align-content: start; color: inherit; text-decoration: none; }
+.karte:hover, .karte:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+.bilder { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: start; }
+.bilder img { border-radius: 16px; border: 1px solid var(--beton); width: 100%; height: auto; }
+.bilder img.mobil { width: 96px; }
+.zeile { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+h2 { font-weight: 400; font-size: 26px; line-height: 1.2; margin: 0; }
+.buchstabe { font-family: var(--mono); font-size: 13px; background: var(--akzent); padding: 2px 12px; border-radius: 50px; }
+.karte p { margin: 0; color: var(--text2); }
+.oeffnen { justify-self: start; border: 1px solid var(--fg); border-radius: 50px; padding: 10px 20px; font-size: 15px; line-height: 1; }
+.karte:hover .oeffnen { background: var(--akzent); border-color: var(--akzent); }
+.hinweise { border-top: 1px solid var(--fg); padding-top: 20px; display: grid; gap: 8px; color: var(--text2); font-size: 15px; max-width: 760px; }
+.hinweise h3 { font-weight: 400; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--fg); margin: 0; }
+.hinweise ul { margin: 0; padding-left: 18px; }
+@media (max-width: 760px) { .raster { grid-template-columns: 1fr; } .bilder img.mobil { width: 72px; } }
+</style>
+
+<div class="seite">
+  <header class="kopf">
+    <p class="mono">Sportshop 111 · Website-Prototyp · Startseite</p>
+    <h1>Vier Entwürfe zur Auswahl</h1>
+    <p>Alle vier zeigen dieselben echten Inhalte von sportshop111.de. Grau markierte Stellen sind Platzhalter für Fotos, Preise und fehlende Texte. Jede Seite hat oben eine Leiste, über die du zwischen A, B, C und D wechselst.</p>
+  </header>
+
+  <div class="raster">
+    <a class="karte" href="a-court.html">
+      <div class="bilder"><img src="vorschau/a-court.jpg" alt="Entwurf A, Desktop-Ansicht" width="864" height="600"><img class="mobil" src="vorschau/a-court-mobil.jpg" alt="Entwurf A, Handy-Ansicht" width="234" height="468"></div>
+      <div class="zeile"><h2>Court</h2><span class="buchstabe">A</span></div>
+      <p>Am nächsten an deiner TWOTWO-Vorlage. Schwarz-Weiß, große grüne Headline über einem breiten Ladenfoto, Produktkarten mit schwarzer Haarlinie.</p>
+      <span class="oeffnen">Entwurf A öffnen</span>
+    </a>
+    <a class="karte" href="b-petrol.html">
+      <div class="bilder"><img src="vorschau/b-petrol.jpg" alt="Entwurf B, Desktop-Ansicht" width="864" height="600"><img class="mobil" src="vorschau/b-petrol-mobil.jpg" alt="Entwurf B, Handy-Ansicht" width="234" height="468"></div>
+      <div class="zeile"><h2>Petrol</h2><span class="buchstabe">B</span></div>
+      <p>Die Ladenfarben im neuen System: Petrolblau statt Schwarz, Gelbgrün als Akzent, die orange „111“ aus dem alten Logo bleibt.</p>
+      <span class="oeffnen">Entwurf B öffnen</span>
+    </a>
+    <a class="karte" href="c-saitenbild.html">
+      <div class="bilder"><img src="vorschau/c-saitenbild.jpg" alt="Entwurf C, Desktop-Ansicht" width="864" height="600"><img class="mobil" src="vorschau/c-saitenbild-mobil.jpg" alt="Entwurf C, Handy-Ansicht" width="234" height="468"></div>
+      <div class="zeile"><h2>Saitenbild</h2><span class="buchstabe">C</span></div>
+      <p>Infos zuerst. Der obere Bereich ist ein Linienraster wie ein Saitenbett, mit Öffnungszeiten, Padelautomat und Telefonnummer direkt im ersten Blick.</p>
+      <span class="oeffnen">Entwurf C öffnen</span>
+    </a>
+    <a class="karte" href="d-werkstatt.html">
+      <div class="bilder"><img src="vorschau/d-werkstatt.jpg" alt="Entwurf D, Desktop-Ansicht" width="864" height="600"><img class="mobil" src="vorschau/d-werkstatt-mobil.jpg" alt="Entwurf D, Handy-Ansicht" width="234" height="468"></div>
+      <div class="zeile"><h2>Werkstatt</h2><span class="buchstabe">D</span></div>
+      <p>Die Besaitung als Aushängeschild. Schwarzer Kopfbereich mit einem Besaitungsauftrag als Motiv, technische Schrift für Daten, Fuß in Petrol.</p>
+      <span class="oeffnen">Entwurf D öffnen</span>
+    </a>
+  </div>
+
+  <section class="hinweise">
+    <h3>Gilt für alle vier</h3>
+    <ul>
+      <li>Keine Kasse: „Im Laden reservieren“ führt zu den Kontaktdaten.</li>
+      <li>Schriften liegen auf dem eigenen Server, es werden keine Daten an Google oder andere Dienste geschickt. Keine Cookies.</li>
+      <li>Am Handy gibt es unten eine feste Leiste mit „Anrufen“ und „Route“.</li>
+      <li>Die Wortmarke „SPORTSHOP 111“ ist ein Vorschlag. Das alte Logo kann auch bleiben.</li>
+      <li>Produktnamen sind Beispielmodelle der Marken, die der Laden führt. Preise und Fotos liefert der Laden.</li>
+    </ul>
+  </section>
+</div>
