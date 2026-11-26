@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Produkt · Sportshop 111 Shop-Prototyp</title>
+<link rel="stylesheet" href="basis.css">
+<link rel="stylesheet" href="a-court.css">
+<link rel="stylesheet" href="shop.css">
+</head>
+<body>
+<a class="skiplink" href="#inhalt">Zum Inhalt springen</a>
+
+<div class="entwurf">
+  <div class="innen">
+    <span>Shop-Prototyp im Stil A · Grau markierte Stellen sind Platzhalter</span>
+    <nav aria-label="Prototyp-Seiten"><a href="a-court.html">Start</a><a href="kollektion.html">Kollektion</a><a href="produkt.html" aria-current="page">Produkt</a><a href="warenkorb.html">Warenkorb</a><a href="angebot.html">Angebot</a></nav>
+  </div>
+</div>
+
+<header class="kopf">
+  <div class="innen kopf__zeile">
+    <a class="marke" href="a-court.html" aria-label="Sportshop 111, zur Startseite">SPORTSHOP <span class="marke__zahl">111</span></a>
+    <nav class="hauptnav" aria-label="Hauptnavigation">
+      <a href="kollektion.html">Tennis</a>
+      <a href="kollektion.html">Padel</a>
+      <a href="kollektion.html">Hockey</a>
+      <a href="produkt.html">Besaitung</a>
+      <a href="a-court.html#kontakt">Kontakt</a>
+    </nav>
+    <a class="kopf__tel" href="warenkorb.html">Warenkorb (1)</a>
+  </div>
+</header>
+
+<main id="inhalt">
+  <section class="abschnitt" aria-labelledby="prod-titel">
+    <div class="innen produktseite">
+      <div class="galerie">
+        <div class="ph-bild galerie__haupt">Produktfoto, Hochformat 3:4</div>
+        <div class="galerie__reihe">
+          <div class="ph-bild">Foto 2</div>
+          <div class="ph-bild">Foto 3</div>
+          <div class="ph-bild">Foto 4</div>
+        </div>
+      </div>
+      <div class="kauf">
+        <p class="label">Tennisschläger · Babolat</p>
+        <h1 id="prod-titel">Babolat Pure Aero</h1>
+        <p class="kauf__preis"><span class="ph">–,– €</span> <span class="klein">inkl. MwSt.</span></p>
+        <p class="kauf__text"><span class="ph">Beschreibung vom Hersteller folgt</span></p>
+
+        <fieldset class="optionen">
+          <legend>Besaitung</legend>
+          <label class="auswahl"><input type="radio" name="besaitung" value="ohne"> <span>Ohne Besaitung</span></label>
+          <label class="auswahl"><input type="radio" name="besaitung" value="mit" checked> <span>Mit Besaitung auf der Babolat Sensor Expert Dual <span class="ph">+ –,– €</span></span></label>
+        </fieldset>
+
+        <div class="feld">
+          <label for="saite">Saite</label>
+          <select id="saite" name="saite">
+            <option>Saite wählen</option>
+            <option>Babolat</option>
+            <option>Wilson</option>
+            <option>Head</option>
+            <option>Luxilon</option>
+            <option>Polystar</option>
+            <option>Kirschbaum</option>
+            <option>Eigene Saite mitbringen</option>
+          </select>
+          <p class="feld__hinweis">Über 60 Saiten vorrätig. Die genaue Auswahl pflegt der Laden.</p>
+        </div>
+        <div class="feld">
+          <label for="haerte">Gewünschte Härte in kg</label>
+          <input id="haerte" name="haerte" type="text" inputmode="decimal" placeholder="zum Beispiel 24">
+        </div>
+
+        <a class="pill pill--breit" href="warenkorb.html">In den Warenkorb</a>
+
+        <ul class="kauf__liste">
+          <li><strong>Abholung im Laden:</strong> Siedlerstraße 111, Di–Fr 16:00–19:00 Uhr. <span class="ph">Bereit ab: Laden legt fest</span></li>
+          <li><strong>Versand:</strong> <span class="ph">Versandarten und Preise folgen</span></li>
+          <li><strong>Fragen zum Schläger:</strong> <a href="tel:+499115434890">0911 5434890</a>. Testschläger sind kostenlos.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="fuss">
+  <div class="innen fuss__raster">
+    <p class="marke marke--fuss">SPORTSHOP <span class="marke__zahl">111</span></p>
+    <p>Siedlerstraße 111 · 90480 Nürnberg · 0911 5434890</p>
+    <nav aria-label="Rechtliches"><a href="#">Impressum</a> <a href="#">Datenschutz</a> <a href="#">AGB</a> <a href="#">Widerruf</a> <a href="#">Versand</a></nav>
+  </div>
+</footer>
+
+<nav class="mobilbar" aria-label="Schnellzugriff">
+  <a href="tel:+499115434890">Anrufen</a>
+  <a href="warenkorb.html">Warenkorb</a>
+</nav>
+</body>
+</html>
