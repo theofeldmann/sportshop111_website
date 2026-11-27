@@ -102,3 +102,21 @@
   .tabelle thead th { font-size: 11px; }
   .tabelle .ph { white-space: normal; }
 }
+
+/* Padel-Automat und Hockey-Bild */
+.automat-block {
+  background: var(--schwarz); color: var(--weiss); border-radius: var(--radius-flaeche);
+  display: grid; grid-template-columns: auto 1fr auto; gap: 32px; align-items: center;
+  padding: 32px; margin-bottom: 40px;
+}
+.automat-block .automat__zeit { font-size: clamp(48px, 7vw, 72px); line-height: 1; letter-spacing: -0.02em; color: var(--akzent); }
+.automat-block h2 { font-weight: 400; font-size: 26px; line-height: 1.3; }
+.automat-block p { color: #cfcfcf; }
+.pill--rand-dunkel { background: transparent; color: var(--weiss); border-color: var(--weiss); }
+.pill--rand-dunkel:hover { background: var(--akzent); color: var(--schwarz); border-color: var(--akzent); }
+.automat-block :focus-visible { outline-color: var(--akzent); }
+.hockey__bild { aspect-ratio: 16 / 7; }
+.block > .raster3 { margin-top: 8px; }
+@media (max-width: 900px) { .automat-block { grid-template-columns: 1fr; gap: 16px; padding: 24px; } }
+
+.block .ph, .kauf .ph { white-space: normal; }

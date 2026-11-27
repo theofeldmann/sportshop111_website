@@ -179,3 +179,30 @@ address { font-style: normal; font-size: 22px; line-height: 1.4; margin-bottom: 
   .fakten > div { grid-template-columns: 1fr; gap: 4px; }
   .marken__liste { font-size: 20px; gap: 6px 24px; }
 }
+
+/* Handy-Menü ohne Skript: details/summary. Auf dem Desktop bleibt die Navigationsleiste. */
+.menue { display: none; }
+@media (max-width: 900px) {
+  .hauptnav { display: none; }
+  .menue { display: block; margin-left: auto; position: relative; }
+  .kopf__tel { margin-left: 0; }
+  .menue summary {
+    list-style: none; cursor: pointer;
+    border: 1px solid var(--linie); border-radius: var(--radius-aktion);
+    padding: 8px 20px; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase;
+    min-height: 40px; display: flex; align-items: center;
+  }
+  .menue summary::-webkit-details-marker { display: none; }
+  .menue[open] summary { background: var(--schwarz); color: var(--weiss); }
+  .menue__liste {
+    position: absolute; right: 0; top: calc(100% + 8px); z-index: 40;
+    min-width: 220px; display: grid; padding: 8px;
+    background: var(--weiss); border: 1px solid var(--linie); border-radius: var(--radius-flaeche);
+  }
+  .menue__liste a {
+    padding: 12px 16px; text-decoration: none; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase;
+  }
+  .menue__liste a:hover { background: var(--beton); border-radius: var(--radius-aktion); }
+}
+
+@media (max-width: 720px) { .kopf__tel { display: none; } }
