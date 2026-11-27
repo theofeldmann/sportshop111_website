@@ -120,3 +120,6 @@
 @media (max-width: 900px) { .automat-block { grid-template-columns: 1fr; gap: 16px; padding: 24px; } }
 
 .block .ph, .kauf .ph { white-space: normal; }
+
+.innen:not(.angebot) > .block + .block { margin-top: 40px; }
+.automat-block h2 { margin-bottom: 4px; }
