@@ -30,9 +30,18 @@
 .hauptnav a:hover, .kopf__tel:hover { text-decoration: underline; text-underline-offset: 4px; }
 
 /* Hero */
-.hero { position: relative; }
+.hero { position: relative; min-height: 560px; background: #3a3d3f; color: var(--weiss); overflow: hidden; }
 .hero__bild {
-  min-height: 560px; border-radius: 0; align-items: flex-end;
+  position: absolute; inset: 0; border-radius: 0;
+  background: #3a3d3f url("img/hero-poster.jpg") center / cover no-repeat;
+}
+.hero__bild video {
+  width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;
+}
+.hero__bild::after { content: ""; position: absolute; inset: 0; background: rgba(0, 0, 0, 0.35); }
+.hero__text { z-index: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .hero__bild video { display: none; }
 }
 .hero__text {
   position: absolute; inset: 0;
@@ -173,7 +182,7 @@ address { font-style: normal; font-size: 22px; line-height: 1.4; margin-bottom: 
   .sportkarte__bild { aspect-ratio: 16 / 10; }
   .produkt__bild { aspect-ratio: 1 / 1; }
   .kopf__zeile { gap: 12px 20px; padding-top: 16px; }
-  .hero__bild { min-height: 440px; }
+  .hero { min-height: 440px; }
   .infoleiste__raster { grid-template-columns: 1fr; }
   .infoleiste__raster > div + div { border-left: 0; padding-left: 0; border-top: 1px solid var(--linie); }
   .fakten > div { grid-template-columns: 1fr; gap: 4px; }
