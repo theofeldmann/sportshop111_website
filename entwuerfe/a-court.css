@@ -38,7 +38,7 @@
 .hero__bild video {
   width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;
 }
-.hero__bild::after { content: ""; position: absolute; inset: 0; background: rgba(0, 0, 0, 0.35); }
+.hero__bild::after { content: ""; position: absolute; inset: 0; background: rgba(0, 0, 0, 0.45); }
 .hero__text { z-index: 1; }
 @media (prefers-reduced-motion: reduce) {
   .hero__bild video { display: none; }
